@@ -12,9 +12,14 @@ use App\Http\Controllers\{
   LaporanController
 };
 
-
+Route::get('/', function () {
+  return view('welcome');
+});
+//masyarakat
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin');
+Route::post('/store', [UserController::class, 'storePengaduan'])->name('pekat.store');
+Route::get('/laporan/{siapa?}', [UserController::class, 'laporan'])->name('pekat.laporan');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
