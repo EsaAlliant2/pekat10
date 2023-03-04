@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('title', 'Pengaduan')
 
@@ -9,6 +9,9 @@
 @section('header', 'Data Pengaduan')
 
 @section('content')
+<div class="section-header">
+    <h1>Pengaduan</h1>
+  </div>
     <table id='PengaduanTable' class="table">
         <thead>
             <tr>

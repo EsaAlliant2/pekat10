@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
@@ -7,6 +7,9 @@
 @section('header', 'Data Petugas')
 
 @section('content')
+<div class="section-header">
+    <h1>Petugas</h1>
+  </div>
     <a href="{{ route('petugas.create') }}" class="btn btn-purple m-2">Tambah Petugas</a>
     <table id="petugasTable" class="table">
         <thead>
